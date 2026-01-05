@@ -8,7 +8,7 @@
     )
     
     select t.*
-    from {{ source(source_name, table_name) }} t
+    from {{ source(source_name, table_name) }} as t
     inner join latest_file lf
         on t._file = lf._file
         and t._modified = lf._modified
