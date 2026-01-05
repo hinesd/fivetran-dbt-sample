@@ -1,5 +1,6 @@
 select
     _file,
+    _modified,
     customer_id,
     company,
     email,
@@ -10,4 +11,4 @@ select
     website,
     city,
     country
-from {{ source('fivetran', 'customer') }}
+from {{ get_latest_file_data('fivetran', 'customer') }}
