@@ -1,0 +1,11 @@
+sources:
+    - name: fivetran
+      description: This is a replica of the BigQuery raw tables
+      database: sampledatalake-483315
+      schema: fivetran
+      tables:
+          - name: customer
+            description: One record per customer
+          - name: people
+            description: One record per person
+
